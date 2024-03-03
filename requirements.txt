@@ -1,0 +1,9 @@
+
+spacy
+wordcloud
+matplotlib
+scrapy
+nltk
+
+# After installing, run the following manually:
+# python -m spacy download en_core_web_sm

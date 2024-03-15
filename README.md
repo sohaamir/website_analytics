@@ -9,9 +9,9 @@ Here are instructions on how to set up your environment:
 ```bash
 git clone <repo>
 cd <repo>
-pip install virtualenv (if you don't already have virtualenv installed)
-virtualenv venv to create your new environment (called 'venv' here)
-source venv/bin/activate to enter the virtual environment
+pip install virtualenv # (if you don't already have virtualenv installed)
+virtualenv venv # to create your new environment (called 'venv' here)
+source venv/bin/activate # to enter the virtual environment
 pip install -r requirements.txt
 ```
 The more basic `requirements.txt` file is:

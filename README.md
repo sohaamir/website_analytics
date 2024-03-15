@@ -2,6 +2,12 @@
 
 This directory contains code for some analytics of my [GitHub website](https://sohaamir.github.io/).
 
+### Creating a wordcloud of scientific terms used
+
+Here is how I was able to create the following wordcloud plot, based upon the number of times a scientific term was used in my website:
+
+[image]
+
 ## Setting up the environment:
 
 Here are instructions on how to set up your environment:
@@ -14,7 +20,8 @@ virtualenv venv # to create your new environment (called 'venv' here)
 source venv/bin/activate # to enter the virtual environment
 pip install -r requirements.txt
 ```
-The more basic `requirements.txt` file is:
+
+The dependencies contained within the `requirements.txt` file are:
 
 ```bash
 spacy
@@ -25,7 +32,7 @@ nltk
 ```
 
 ### Installing spacy
-You may need to run the following manually in your terminal: 
+You will need to run the following manually in your `venv`: 
 
 `python -m spacy download en_core_web_sm`
 
@@ -54,14 +61,10 @@ and then
 
 ### Running the scripts
 
-`cd /your/venv/path/here `
+From inside your `venv` at the root of the `website_analytics` directory:
 
-and activate venv by 
-
-`source scrapyenv311/bin/activate `
-
-`cd/ wordscraper` and run `scrapy crawl sohaamir -o words.json`
+`cd/ wordscraper` and run `scrapy crawl sohaamir -o words.json`.
 
 Manually remove the last line (for now until I fix this).
 
-Then run `python3 subsetting_json.py`, `pip install wordcloud` and `plot_wordcloud.py`.
+Then run `python3 subsetting_json.py`, `pip install wordcloud` and `python3 plot_wordcloud.py`.

@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 The dependencies contained within the `requirements.txt` file are:
 
-```bash
+```python
 spacy
 wordcloud
 matplotlib
@@ -50,14 +50,14 @@ Run the Install Certificates.command script by typing:
 `"./Install\ Certificates.command"`
 
 Open python3 in your terminal and type the following:
-```
+```python
 import nltk
 nltk.download('punkt')
 ```
 
 and then 
 
-`exit()`
+`exit()`.
 
 ### Running the scripts
 

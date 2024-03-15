@@ -6,7 +6,7 @@ This directory contains code for some analytics of my [GitHub website](https://s
 
 Here is how I was able to create the following wordcloud plot, based upon the number of times a scientific term was used in my website:
 
-[image]
+[put wordcloud here]
 
 ## Setting up the environment:
 
@@ -63,8 +63,8 @@ and then
 
 From inside your `venv` at the root of the `website_analytics` directory:
 
-`cd/ wordscraper` and run `scrapy crawl sohaamir -o words.json`.
+`cd wordscraper` and then run `scrapy crawl sohaamir -o words.json`.
 
-Manually remove the last line (for now until I fix this).
+Manually remove the last line from `words.json` (for now until I fix this).
 
 Then run `python3 subsetting_json.py`, `pip install wordcloud` and `python3 plot_wordcloud.py`.

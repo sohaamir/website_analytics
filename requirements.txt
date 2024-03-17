@@ -7,4 +7,3 @@ nltk
 # Inspitational Quotes Generator using Streamlit
 streamlit
 requests
-os

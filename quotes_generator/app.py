@@ -57,7 +57,7 @@ def main():
         time.sleep(10)  # Adjust the sleep time as needed
 
         # Rerun the app to update the quote and background
-        st.experimental_rerun()
+        st.rerun()
 
 # Run the Streamlit app
 if __name__ == "__main__":

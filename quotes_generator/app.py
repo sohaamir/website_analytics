@@ -5,7 +5,7 @@ import random
 import time
 import os
 import io
-import PIL.Image as Image
+from PIL import Image
 
 # Define a function to load quotes from the quotes.json file
 def load_quotes():

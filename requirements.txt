@@ -1,5 +1,9 @@
+# Web Scraping with Scrapy
 spacy
 wordcloud
 matplotlib
 scrapy
 nltk
+# Inspitational Quotes Generator using Streamlit
+streamlit
+requests

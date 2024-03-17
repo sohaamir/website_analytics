@@ -1,8 +1,8 @@
 # Website analytics
 
-This directory contains code for some analytics of my [GitHub website](https://sohaamir.github.io/).
+This directory contains code for some projects related to my [GitHub website](https://sohaamir.github.io/).
 
-### Creating a wordcloud of scientific terms used
+### Creating a wordcloud of scientific terms used across the website
 
 Here is how I was able to create the following wordcloud plot, based upon the number of times a scientific term was used in my website:
 

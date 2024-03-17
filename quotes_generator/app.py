@@ -10,7 +10,7 @@ st.write('Current directory:', os.getcwd())
 
 # Try to load quotes from the quotes.json file
 try:
-    with open("quotes.json", "r") as file:
+    with open("../quotes.json", "r") as file:
         quotes = json.load(file)
 except FileNotFoundError:
     st.error("File quotes.json not found in the current directory.")

@@ -5,16 +5,17 @@ import random
 import time
 import os
 
-# Print the current working directory to debug file not found errors
-st.write('Current directory:', os.getcwd())
-
-# Try to load quotes from the quotes.json file
-try:
-    with open("../quotes.json", "r") as file:
-        quotes = json.load(file)
-except FileNotFoundError:
-    st.error("File quotes.json not found in the current directory.")
-    quotes = []
+# Define a function to load quotes from the quotes.json file
+def load_quotes():
+    try:
+        with open("quotes.json", "r") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        st.error("File quotes.json not found in the current directory.")
+        return []
+    except json.JSONDecodeError:
+        st.error("Error reading quotes.json. Make sure the file is valid JSON.")
+        return []
 
 # Define a function to fetch a random background image
 def fetch_random_background():
@@ -26,8 +27,17 @@ def display_quote(quote, author, background_image_bytes):
     # Display the image with the quote as a caption
     st.image(background_image_bytes, caption=f'"{quote}" - {author}', use_column_width='always')
 
+# Define the main function of the Streamlit app
 def main():
     st.title('Inspirational Quotes Generator')
+
+    # Load quotes
+    quotes = load_quotes()
+
+    # Check if quotes are loaded
+    if not quotes:
+        st.warning("No quotes to display.")
+        return
 
     # Continuously update the quote and background
     while True:
@@ -49,5 +59,6 @@ def main():
         # Rerun the app to update the quote and background
         st.experimental_rerun()
 
+# Run the Streamlit app
 if __name__ == "__main__":
     main()

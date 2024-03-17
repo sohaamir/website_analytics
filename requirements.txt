@@ -7,3 +7,4 @@ nltk
 # Inspitational Quotes Generator using Streamlit
 streamlit
 requests
+Pillow

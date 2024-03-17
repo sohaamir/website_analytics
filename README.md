@@ -1,4 +1,4 @@
-# Website analytics
+# Website projects
 
 This directory contains code for some projects related to my [GitHub website](https://sohaamir.github.io/).
 

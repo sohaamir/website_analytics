@@ -7,17 +7,53 @@ Specifically, this involves:
 - Creating a wordcloud of scientific terms used across the website (using `scrapy`, `spacy` and `nltk`).
 - Generating a deployable app that refreshes scenic cartoon wallpapers and inspirational quotes (using `beautifulsoup4`, `serpapi`, `requests` and `streamlit`).
 
-## Project structure
+## Directory structure
 
 ```
-
+├── README.md
+├── quotes.json
+├── quotes_generator
+│   ├── app.py
+│   └── quotes.json
+├── requirements.txt
+└── wordscraper
+    ├── assets
+    │   └── website_wordcloud.png
+    ├── data
+    │   ├── names.json
+    │   ├── scientific_words.json
+    │   └── words.json
+    ├── misc_code
+    │   ├── plot_wordcloud.py
+    │   ├── slice_json.py
+    │   └── subsetting_json.py
+    ├── scrapy.cfg
+    └── wordscraper
+        ├── __init__.py
+        ├── __pycache__
+        │   ├── __init__.cpython-311.pyc
+        │   ├── pipelines.cpython-311.pyc
+        │   └── settings.cpython-311.pyc
+        ├── items.py
+        ├── middlewares.py
+        ├── pipelines.py
+        ├── settings.py
+        └── spiders
+            ├── __init__.py
+            ├── __pycache__
+            │   ├── __init__.cpython-311.pyc
+            │   └── sohaamir_spider.cpython-311.pyc
+            └── sohaamir_spider.py
 ```
 
 ## Creating a wordcloud of scientific terms used across the website
 
 Here is how I was able to create the following wordcloud plot, based upon the number of times a scientific term was used in my website:
 
-[put wordcloud here]
+<div align="center">
+  <img src="https://github.com/sohaamir/website_projects/blob/main/wordscraper/assets/website_wordcloud.png" width="60%">
+</div>
+<br>
 
 ## Setting up the environment:
 

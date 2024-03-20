@@ -1,8 +1,19 @@
 # Website projects
 
-This directory contains code for some projects related to my [GitHub website](https://sohaamir.github.io/).
+This directory contains code for some projects related to my [GitHub website](https://sohaamir.github.io/). 
 
-### Creating a wordcloud of scientific terms used across the website
+Specifically, this involves:
+
+- Creating a wordcloud of scientific terms used across the website (using `scrapy`, `spacy` and `nltk`).
+- Generating a deployable app that refreshes scenic cartoon wallpapers and inspirational quotes (using `beautifulsoup4`, `serpapi`, `requests` and `streamlit`).
+
+## Project structure
+
+```
+
+```
+
+## Creating a wordcloud of scientific terms used across the website
 
 Here is how I was able to create the following wordcloud plot, based upon the number of times a scientific term was used in my website:
 

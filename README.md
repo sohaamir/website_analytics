@@ -2,8 +2,6 @@
 
 This directory contains code for some projects related to my [GitHub website](https://sohaamir.github.io/). 
 
-Specifically, this involves:
-
 - Creating a wordcloud of scientific terms used across the website (using `scrapy`, `spacy` and `nltk`).
 - Generating a deployable app that refreshes scenic cartoon wallpapers and inspirational quotes (using `beautifulsoup4`, `serpapi`, `requests` and `streamlit`).
 
@@ -54,6 +52,28 @@ Here is how I was able to create the following wordcloud plot, based upon the nu
   <img src="https://github.com/sohaamir/website_projects/blob/main/wordscraper/assets/website_wordcloud.png" width="60%">
 </div>
 <br>
+
+The following packages were used:
+
+- `Scrapy`: Extracting structured text data from the website.
+- `Spacy`: Processing text, identifying scientific terms with better accuracy.
+- `NLTK`: Supporting text filtering based on a scientific vocabulary list.
+- `Wordcloud`: Generating a visually insightful word cloud.
+
+1. Web Scraping with Scrapy:
+
+I designed a Scrapy spider to systematically navigate my GitHub website. The spider carefully extracted textual content from designated sections of the website using CSS selectors. This scraped data was stored for further processing.
+
+2. Scientific Term Extraction with Spacy and NLTK:
+
+I then loaded Spacy's 'en_core_sci_sm' model, a language model trained on scientific texts, for enhanced accuracy in recognizing relevant terms.
+The scraped text was cleaned and tokenized using Spacy. Spacy's part-of-speech tagging identified nouns and adjectives, focusing on scientific terms.
+
+NLTK cross-referenced the extracted words with a curated list of common scientific terms, filtering the results.
+
+3. Word Cloud Generation with Wordcloud:
+
+Using the Wordcloud library, I generated a word cloud highlighting the most frequently occurring scientific terms on the website.
 
 ## Setting up the environment:
 
@@ -108,10 +128,14 @@ and then
 
 ### Running the scripts
 
+Make sure you are in the correct directory when running these scripts!
+
 From inside your `venv` at the root of the `website_analytics` directory:
 
-`cd wordscraper` and then run `scrapy crawl sohaamir -o words.json`.
+Change into the correct directory by `cd wordscraper` and then run `scrapy` on the website by `scrapy crawl sohaamir -o words.json`.
 
-Manually remove the last line from `words.json` (for now until I fix this).
+This will generated `words.json`. You will have to manually remove the last line from `words.json` (for now until I fix this).
 
-Then run `python3 subsetting_json.py`, `pip install wordcloud` and `python3 plot_wordcloud.py`.
+Then run `python3 subsetting_json.py` which subsets the words to scientific words using `spacy`. 
+
+To plot the wordcloud, run `python3 plot_wordcloud.py`.

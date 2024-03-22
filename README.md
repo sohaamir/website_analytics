@@ -134,8 +134,10 @@ From inside your `venv` at the root of the `website_analytics` directory:
 
 Change into the correct directory by `cd wordscraper` and then run `scrapy` on the website by `scrapy crawl sohaamir -o words.json`.
 
-This will generated `words.json`. You will have to manually remove the last line from `words.json` (for now until I fix this).
+This will generate `words.json`, which is a list of words mentioned in the website. You will have to manually remove the last line from `words.json` (for now until I fix this).
 
 Then run `python3 subsetting_json.py` which subsets the words to scientific words using `spacy`. 
 
 To plot the wordcloud, run `python3 plot_wordcloud.py`.
+
+And voila, you have your wordcloud of scientific terms!

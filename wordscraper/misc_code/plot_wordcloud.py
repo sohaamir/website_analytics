@@ -3,7 +3,7 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 # Load scientific words data
-with open('scientific_words.json', 'r', encoding='utf-8') as f:
+with open('../data/scientific_words.json', 'r', encoding='utf-8') as f:
     word_counts = json.load(f)
 
 # Customize the word cloud appearance
@@ -25,7 +25,7 @@ plt.axis('off')
 plt.tight_layout(pad=0)  # Adjust layout to make room for the title if necessary
 
 # Save the figure BEFORE plt.show()
-plt.savefig('website_wordcloud.png', format='png')  # This will overwrite existing file
+plt.savefig('../assets/website_wordcloud.png', format='png')  # This will overwrite existing file
 
 # Now display the plot
 plt.show()

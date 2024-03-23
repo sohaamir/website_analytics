@@ -3,7 +3,7 @@
 This directory contains code for some projects related to my [GitHub website](https://sohaamir.github.io/). 
 
 - Creating a wordcloud of scientific terms used across the website (using `scrapy`, `spacy` and `nltk`).
-- Generating a deployable app that refreshes scenic cartoon wallpapers and inspirational quotes (using `beautifulsoup4`, `serpapi`, `requests` and `streamlit`).
+- Generating a deployable app that refreshes scenic cartoon wallpapers and inspirational quotes (using `requests` and `streamlit`).
 
 ## Directory structure
 

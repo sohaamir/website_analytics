@@ -21,7 +21,7 @@ scientific_words = set([
 
 
 # Load words from the original JSON file
-with open('words.json') as f:
+with open('../data/words.json') as f:
     word_counts = json.load(f)
 
 # Initialize containers for scientific words and names
@@ -44,9 +44,9 @@ for word, count in word_counts.items():
         continue
 
 # Write scientific words to a new JSON file
-with open('scientific_words.json', 'w') as f:
+with open('../data/scientific_words.json', 'w') as f:
     json.dump(scientific, f, indent=4)
 
 # Write names to another new JSON file
-with open('names.json', 'w') as f:
+with open('../data/names.json', 'w') as f:
     json.dump(names, f, indent=4)

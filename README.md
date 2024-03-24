@@ -78,7 +78,7 @@ Using the Wordcloud library, I generated a word cloud highlighting the most freq
 
 
 
-## Creating a wordcloud of scientific terms used across the website
+## Generating a deployable app that refreshes scenic cartoon wallpapers and inspirational quotes (using requests and streamlit).
 
 <div align="center">
   <img src="https://github.com/sohaamir/website_projects/blob/main/quotes_generator/assets/streamlit.gif" width="70%">

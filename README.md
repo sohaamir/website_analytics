@@ -50,8 +50,10 @@ This directory contains code for some projects related to my [GitHub website](ht
 
 ## Creating a wordcloud of scientific terms used across the website
 
-![chbh_website_pis](https://github.com/sohaamir/chbh_google_scholar/blob/main/assets/website_wordcloud.png)
-
+<div align="center">
+  <img src="https://github.com/sohaamir/website_projects/blob/main/wordscraper/assets/website_wordcloud.png" width="70%">
+</div>
+<br>
 The following packages were used:
 
 - `Scrapy`: Extracting structured text data from the website.
@@ -78,7 +80,10 @@ Using the Wordcloud library, I generated a word cloud highlighting the most freq
 
 ## Creating a wordcloud of scientific terms used across the website
 
-![streamlit_app](https://github.com/sohaamir/website_projects/blob/main/quotes_generator/assets/streamlit.gif)
+<div align="center">
+  <img src="https://github.com/sohaamir/website_projects/blob/main/quotes_generator/assets/streamlit.gif" width="70%">
+</div>
+<br>
 
 The project utilizes the following packages:
 

@@ -4,7 +4,9 @@ Do you need constant inspiration? If so, then it may be worth creating an app wh
 
 The end result should look something like this:
 
-![streamlit_app](https://github.com/sohaamir/website_projects/blob/main/quotes_generator/assets/streamlit.gif)
+<div align="center">
+  <img src="https://github.com/sohaamir/website_projects/blob/main/quotes_generator/assets/streamlit.gif" width="70%">
+</div>
 
 ### Setting up the environment:
 

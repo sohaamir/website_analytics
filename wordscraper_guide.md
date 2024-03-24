@@ -2,7 +2,9 @@
 
 This is a detailed guide for creating a wordcloud of scientific terms used across the website (using `scrapy`, `spacy` and `nltk`).
 
-![chbh_website_pis](https://github.com/sohaamir/chbh_google_scholar/blob/main/assets/website_wordcloud.png)
+<div align="center">
+  <img src="https://github.com/sohaamir/website_projects/blob/main/wordscraper/assets/website_wordcloud.png" width="70%">
+</div>
 
 ### Setting up the environment:
 

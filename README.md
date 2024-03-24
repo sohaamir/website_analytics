@@ -10,48 +10,47 @@ This directory contains code for some projects related to my [GitHub website](ht
 ```
 ├── README.md
 ├── quotes.json
+├── quotes_app_guide.md
 ├── quotes_generator
 │   ├── app.py
+│   ├── assets
+│   │   └── streamlit.gif
 │   └── quotes.json
 ├── requirements.txt
-└── wordscraper
-    ├── assets
-    │   └── website_wordcloud.png
-    ├── data
-    │   ├── names.json
-    │   ├── scientific_words.json
-    │   └── words.json
-    ├── misc_code
-    │   ├── plot_wordcloud.py
-    │   ├── slice_json.py
-    │   └── subsetting_json.py
-    ├── scrapy.cfg
-    └── wordscraper
-        ├── __init__.py
-        ├── __pycache__
-        │   ├── __init__.cpython-311.pyc
-        │   ├── pipelines.cpython-311.pyc
-        │   └── settings.cpython-311.pyc
-        ├── items.py
-        ├── middlewares.py
-        ├── pipelines.py
-        ├── settings.py
-        └── spiders
-            ├── __init__.py
-            ├── __pycache__
-            │   ├── __init__.cpython-311.pyc
-            │   └── sohaamir_spider.cpython-311.pyc
-            └── sohaamir_spider.py
+├── wordscraper
+│   ├── assets
+│   │   └── website_wordcloud.png
+│   ├── data
+│   │   ├── names.json
+│   │   ├── scientific_words.json
+│   │   └── words.json
+│   ├── misc_code
+│   │   ├── plot_wordcloud.py
+│   │   ├── slice_json.py
+│   │   └── subsetting_json.py
+│   ├── scrapy.cfg
+│   └── wordscraper
+│       ├── __init__.py
+│       ├── __pycache__
+│       │   ├── __init__.cpython-311.pyc
+│       │   ├── pipelines.cpython-311.pyc
+│       │   └── settings.cpython-311.pyc
+│       ├── items.py
+│       ├── middlewares.py
+│       ├── pipelines.py
+│       ├── settings.py
+│       └── spiders
+│           ├── __init__.py
+│           ├── __pycache__
+│           │   ├── __init__.cpython-311.pyc
+│           │   └── sohaamir_spider.cpython-311.pyc
+│           └── sohaamir_spider.py
+└── wordscraper_guide.md
 ```
 
 ## Creating a wordcloud of scientific terms used across the website
 
-Here is how I was able to create the following wordcloud plot, based upon the number of times a scientific term was used in my website:
-
-<div align="center">
-  <img src="https://github.com/sohaamir/website_projects/blob/main/wordscraper/assets/website_wordcloud.png" width="60%">
-</div>
-<br>
+![chbh_website_pis](https://github.com/sohaamir/chbh_google_scholar/blob/main/assets/website_wordcloud.png)
 
 The following packages were used:
 
@@ -75,69 +74,34 @@ NLTK cross-referenced the extracted words with a curated list of common scientif
 
 Using the Wordcloud library, I generated a word cloud highlighting the most frequently occurring scientific terms on the website.
 
-## Setting up the environment:
 
-Here are instructions on how to set up your environment:
 
-```bash
-git clone <repo>
-cd <repo>
-pip install virtualenv # (if you don't already have virtualenv installed)
-virtualenv venv # to create your new environment (called 'venv' here)
-source venv/bin/activate # to enter the virtual environment
-pip install -r requirements.txt
-```
+## Creating a wordcloud of scientific terms used across the website
 
-The dependencies contained within the `requirements.txt` file are:
+![streamlit_app](https://github.com/sohaamir/website_projects/blob/main/quotes_generator/assets/streamlit.gif)
 
-```python
-spacy
-wordcloud
-matplotlib
-scrapy
-nltk
-```
+The project utilizes the following packages:
 
-### Installing spacy
-You will need to run the following manually in your `venv`: 
+- `streamlit`: For creating and hosting the web app.
+- `requests`: To fetch random background images from the web.
+- `Pillow`: For image processing tasks.
 
-`python -m spacy download en_core_web_sm`
+1. **Quote Extraction and JSON Storage**:
 
-### Installing nltk
+I sourced a comprehensive list of inspirational quotes in JSON format from a GitHub repository. This file, `quotes.json`, provide the list of quotes for the app.
 
-You may also need to manually install `nltk` which you can do using the following steps:
+2. **Dynamic Background Image Fetching with Requests**:
 
-Navigate to the Python installation directory by running:
-`cd "/path/to/your/python"`
+I utilized the wallpaper library [Minimalistic Wallpaper Collection](https://github.com/DenverCoder1/minimalistic-wallpaper-collection) which includes a random wallpaper API. We can then request random wallpapers from the collection and load it into our app.
 
-e.g.
-`cd "/Applications/Python 3.11"`
+3. **Streamlit App Development**:
 
-Run the Install Certificates.command script by typing:
-`"./Install\ Certificates.command"`
+- The app was built using Streamlit to read quotes from the JSON file. 
+- Utilizing a combination of the `random` library for quote selection and time-controlled loops with `time.sleep(10)`, the app is designed to continuously loop through both quotes and wallpaper, presenting a new quote and background image approximately every 10 seconds.
 
-Open python3 in your terminal and type the following:
-```python
-import nltk
-nltk.download('punkt')
-```
+**Deployment on Streamlit Sharing**:
 
-and then 
+The app is prepared for deployment on Streamlit Sharing, a platform that simplifies the process of bringing Python apps online. By connecting the GitHub repository containing the app's code, the app can be easily shared and accessed via the web.
 
-`exit()`.
+You can access the app by going to https://quotesgenerator.streamlit.app (although it doesn't run for very long due to request limitations from the API I think).
 
-### Running the scripts
-
-Make sure you are in the correct directory when running these scripts!
-
-From inside your `venv` at the root of the `website_analytics` directory:
-
-Change into the correct directory by `cd wordscraper` and then run `scrapy` on the website by `scrapy crawl sohaamir -o words.json`.
-
-This will generate `words.json`, which is a list of words mentioned in the website. You will have to manually remove the last line from `words.json` (for now until I fix this).
-
-Then run `python3 subsetting_json.py` which subsets the words to scientific words using `spacy`. 
-
-To plot the wordcloud, run `python3 plot_wordcloud.py`.
-
-And voila, you have your wordcloud of scientific terms!

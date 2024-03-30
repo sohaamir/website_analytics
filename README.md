@@ -54,6 +54,9 @@ This directory contains code for some projects related to my [GitHub website](ht
   <img src="https://github.com/sohaamir/website_projects/blob/main/wordscraper/assets/website_wordcloud.png" width="70%">
 </div>
 <br>
+
+[![GitHub Page](https://img.shields.io/badge/Analysis-Guide-blue?style=flat&logo=markdown)](https://github.com/sohaamir/website_projects/blob/main/wordscraper_guide.md) 
+
 The following packages were used:
 
 - `Scrapy`: Extracting structured text data from the website.
@@ -84,6 +87,8 @@ Using the Wordcloud library, I generated a word cloud highlighting the most freq
   <img src="https://github.com/sohaamir/website_projects/blob/main/quotes_generator/assets/streamlit.gif" width="70%">
 </div>
 <br>
+
+[![GitHub Page](https://img.shields.io/badge/Analysis-Guide-blue?style=flat&logo=markdown)](https://github.com/sohaamir/website_projects/blob/main/quotes_app_guide.md) 
 
 The project utilizes the following packages:
 

@@ -48,7 +48,7 @@ This directory contains code for some projects related to my [GitHub website](ht
 └── wordscraper_guide.md
 ```
 
-## Creating a wordcloud of scientific terms used across the website
+## Creating a wordcloud of scientific terms used in my personal website
 
 <div align="center">
   <img src="https://github.com/sohaamir/website_projects/blob/main/wordscraper/assets/website_wordcloud.png" width="70%">
@@ -81,7 +81,7 @@ Using the Wordcloud library, I generated a word cloud highlighting the most freq
 
 
 
-## Generating a deployable app that refreshes scenic cartoon wallpapers and inspirational quotes (using requests and streamlit).
+## Generating a deployable app that refreshes scenic cartoon wallpapers and inspirational quotes
 
 <div align="center">
   <img src="https://github.com/sohaamir/website_projects/blob/main/quotes_generator/assets/streamlit.gif" width="70%">
@@ -94,7 +94,7 @@ The project utilizes the following packages:
 
 - `streamlit`: For creating and hosting the web app.
 - `requests`: To fetch random background images from the web.
-- `Pillow`: For image processing tasks.
+- `Pillow`: For image processing.
 
 1. **Quote Extraction and JSON Storage**:
 
